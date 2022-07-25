@@ -5,8 +5,8 @@ Authors@R:
     person("Kathy", "Nevola", , "kathy.nevola@olink.com", 
     role = c("aut", "cre"))
 Description: This is a demo package that was made as part of the RStudio 2022 
-Conference, during the Building Tidy Tools workshop. This package is meant to 
-clean and analyze data from the engsoccerdata package (Curley 2016).
+    Conference, during the Building Tidy Tools workshop. This package is meant to 
+    clean and analyze data from the engsoccerdata package (Curley 2016).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
