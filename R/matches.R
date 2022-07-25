@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @examples
+#' requireNamespace("engsoccerdata", quietly = TRUE)
 #' uss_make_matches(engsoccerdata::england, "England")
 uss_make_matches <- function(data_engsoc, country) {
   result <-
