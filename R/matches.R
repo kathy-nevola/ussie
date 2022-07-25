@@ -1,3 +1,16 @@
+#' Format European Football data to standard format
+#'
+#'
+#' @param data_engsoc `data frame` from {engsoccerdata}.
+#' @param country `character` country name, one of Spain,  Italy, Germany, England, Holland
+#'
+#' @return dataframe, tibble with columns `country`,
+#' `date`, `season`, `tier`, `home`, `visitor`,
+#' `goals_home`, `goals_visitor`.
+#' @export
+#'
+#' @examples
+#' uss_make_matches(engsoccerdata::england, "England")
 uss_make_matches <- function(data_engsoc, country) {
   result <-
     data_engsoc |>
