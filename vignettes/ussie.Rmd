@@ -1,0 +1,36 @@
+---
+title: "ussie"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ussie}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ussie)
+
+```
+
+```{r matches_italy}
+matches_italy <- uss_make_matches(engsoccerdata::italy, "Italy")
+dplyr::glimpse(matches_italy)
+```
+Combine
+```{r spain and italy data}
+matches_spain <- uss_make_matches(engsoccerdata::spain, "Spain")
+comb_data<-rbind(matches_italy, matches_spain)
+dplyr::glipse(comb_data)
+```
+Plot
+```{r plotting}
+ggplot2::ggplot(comb_data, ggplot2::aes(x = date, y = goals_home, color = country)) + ggplot2::geom_smooth()
+```
+
