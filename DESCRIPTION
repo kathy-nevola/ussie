@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Kathy", "Nevola", , "kathy.nevola@olink.com", 
     role = c("aut", "cre"))
-Description: This is a demo package that was made as part of the RStudio 2022 
+Description: This is a demo package that was made as part of the 2022 RStudio 
     Conference, during the Building Tidy Tools workshop. This package is meant to 
     clean and analyze data from the engsoccerdata package (Curley 2016).
 License: MIT + file LICENSE
@@ -17,4 +17,6 @@ Imports:
     dplyr,
     tibble
 Suggests: 
-    engsoccerdata
+    engsoccerdata,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
