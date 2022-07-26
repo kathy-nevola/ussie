@@ -20,5 +20,6 @@ dataframe, tibble with columns \code{country},
 Format European Football data to standard format
 }
 \examples{
+requireNamespace("engsoccerdata", quietly = TRUE)
 uss_make_matches(engsoccerdata::england, "England")
 }
