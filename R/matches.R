@@ -7,12 +7,17 @@
 #' @return dataframe, tibble with columns `country`,
 #' `date`, `season`, `tier`, `home`, `visitor`,
 #' `goals_home`, `goals_visitor`.
+#'
+#' @inheritParams dplyr::filter
+#'
 #' @export
 #'
 #' @examples
 #' requireNamespace("engsoccerdata", quietly = TRUE)
 #' uss_make_matches(engsoccerdata::england, "England")
-uss_make_matches <- function(data_engsoc, country) {
+#' uss_make_matches(engsoccerdata::italy, "Italy", season == 1929)
+#'
+uss_make_matches <- function(data_engsoc, country, ...) {
   # validate
   validate_data_frame(data_engsoc)
   validate_cols(data_engsoc, cols_engsoc())
@@ -29,6 +34,7 @@ uss_make_matches <- function(data_engsoc, country) {
       visitor = as.character(.data$visitor),
       goals_home = as.integer(.data$hgoal),
       goals_visitor = as.integer(.data$vgoal)
-    )
+    ) |>
+    dplyr::filter(...)
   result
 }

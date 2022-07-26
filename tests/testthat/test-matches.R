@@ -9,5 +9,6 @@ test_that("uss_make_matches works", {
   # if you find a bug, write a test
   expect_s3_class(italy$tier, "factor")
   expect_snapshot(dplyr::glimpse(italy))
+  expect_identical(uss_make_matches(engsoccerdata::italy, "Italy", season == 1929), italy |> dplyr::filter(season ==1929))
 })
 

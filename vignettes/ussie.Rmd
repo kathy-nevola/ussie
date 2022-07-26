@@ -32,4 +32,12 @@ italy_matches <- uss_get_matches("italy")
 head(italy_matches)
 ```
 
+## Get filtered data
+
+The function 'uss_get_matches' can get a filtered data frame by supplying arguments that are passed to dplyr::filter.
+
+```{r filtered}
+uss_make_matches(engsoccerdata::italy, "Italy", season ==1929) |>
+  dplyr::glimpse()
+```
 

@@ -4,12 +4,17 @@
 \alias{uss_make_matches}
 \title{Format European Football data to standard format}
 \usage{
-uss_make_matches(data_engsoc, country)
+uss_make_matches(data_engsoc, country, ...)
 }
 \arguments{
 \item{data_engsoc}{\verb{data frame} from {engsoccerdata}.}
 
 \item{country}{\code{character} country name, one of Spain,  Italy, Germany, England, Holland}
+
+\item{...}{<\code{\link[dplyr:dplyr_data_masking]{data-masking}}> Expressions that return a
+logical value, and are defined in terms of the variables in \code{.data}.
+If multiple expressions are included, they are combined with the \code{&} operator.
+Only rows for which all conditions evaluate to \code{TRUE} are kept.}
 }
 \value{
 dataframe, tibble with columns \code{country},
@@ -22,4 +27,6 @@ Format European Football data to standard format
 \examples{
 requireNamespace("engsoccerdata", quietly = TRUE)
 uss_make_matches(engsoccerdata::england, "England")
+uss_make_matches(engsoccerdata::italy, "Italy", season == 1929)
+
 }
