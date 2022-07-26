@@ -103,8 +103,9 @@ validate_cols <- function(.data, cols_req, call = rlang::caller_env()) {
       class = "ussie_error_cols",
       # other information for developers
       cols_req = cols_req,
-      cols_data = cols_data
+      cols_data = cols_data,
       # tell user where we are calling from
+      call = call
     )
   }
 
