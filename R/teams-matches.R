@@ -70,7 +70,12 @@ uss_make_teams_matches <- function(data_matches) {
   result <-
     teams_matches_home |>
     dplyr::bind_rows(teams_matches_visitor) |>
-    dplyr::select(cols_teams_matches())
+    dplyr::select(cols_teams_matches()) |>
+    dplyr::arrange(
+      dplyr::across(
+        c("country", "tier", "season", "team", "date")
+      )
+    )
 
   # We are not using `dplyr::all_of()` here because `cols_teams_matches()`
   # is a function call - it cannot be confused with a data-frame column name.
