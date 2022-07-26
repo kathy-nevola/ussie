@@ -19,7 +19,8 @@ Imports:
     dplyr,
     engsoccerdata,
     rlang,
-    tibble
+    tibble,
+    withr
 Suggests: 
     knitr,
     rmarkdown,
