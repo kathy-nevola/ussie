@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   ussie: ussie.html
-last_built: 2022-07-26T13:36Z
+last_built: 2022-07-26T14:27Z
 urls:
   reference: https://kathy-nevola.github.io/ussie/reference
   article: https://kathy-nevola.github.io/ussie/articles
