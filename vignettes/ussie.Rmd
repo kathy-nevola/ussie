@@ -24,4 +24,12 @@ matches_italy <- uss_make_matches(engsoccerdata::italy, "Italy")
 dplyr::glimpse(matches_italy)
 ```
 
+ ## Get Country data
+ The function 'uss_get_matches' can get data for a country from a string:
+ 
+```{r match italy}
+italy_matches <- uss_get_matches("italy")
+head(italy_matches)
+```
+
 
